@@ -10,9 +10,9 @@ The files have the following contents:
 - AFCSP.h/cpp               | code required for the arcflow formulation (which is used by our algorithms)
 - IP2RE.h/cpp               | code required for our re-implementation of method IP2 by Mehrani et al. (2022).
 - RM2GIFFRE.h/cpp           | code required for our re-implementation of method RM2-GIFF by Mehrani et al. (2022).
-- LF                        | code required for method LayerFlow.
-- HF                        | code required for method HierarchyFlow.
-- MFMB                      | code required for method MonoFlow-MultiBin.
+- LF.h/cpp                  | code required for method LayerFlow.
+- HF.h/cpp                  | code required for method HierarchyFlow.
+- MFMB.h/cpp                | code required for method MonoFlow-MultiBin.
 - helper_functions.h/cpp    | code containing miscellaneous simple/supportive functions.
 
 Moreover, "InstancesBPPMCF.zip" contains a txt-file for each of our test instances. These are spread over 5 folders, each corresponding to a different data set:
