@@ -1,6 +1,6 @@
 This repository contains the tested instances and code for all algorithms discussed in the paper "Pseudo-Polynomial Formulations for the Bin
 Packing Problem with Minimum Color Fragmentation" by Mathijs Barkel, Maxence Delorme, Enrico Malaguti and Michele Monaci. 
-This repository also contains most of the code for all algorithms discussed in the paper "Bounds and Heuristic Algorithms for the Bin Packing Problem with Minimum Color Fragmentation" by Mathijs Barkel, Maxence Delorme, Enrico Malaguti and Michele Monaci,
+This repository also contains most of the code for all algorithms discussed in the paper "Bounds and Heuristic Algorithms for the Bin Packing Problem with Minimum Color Fragmentation" (by the same authors),
 which was already part of our previous repository "BPPMCF".
 
 All algorithms are coded in C++ and part of our methods require the commercial solver Gurobi (we used version 11.0.2). 
