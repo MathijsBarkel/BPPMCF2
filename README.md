@@ -36,7 +36,7 @@ For Dataset 5 (Triplets):
 - The first line contains the number of items I
 - The remaining lines contain a matrix of size Ix2, where each row i gives the color c and the weight w of item i.
 
-For questions on the code, send an e-mail to mathijsbarkel3@gmail.com.
+For questions on the code, send an e-mail to mathijsbarkel3[at]gmail[dot]com.
 
 References:
 - Barkel, M., Delorme, M., Malaguti, E., and Monaci, M. (2025). Bounds and heuristic algorithms for the bin packing problem with minimum color fragmentation. European Journal of Operational Research, 320(1):57–68.
