@@ -483,6 +483,12 @@ bool itemOrdering(const vector<int>& v1, const vector<int>& v2) {
     return 100000 * v1[0] - v1[1] < 100000 * v2[0] - v2[1];
 }
 
+bool reverseItemOrdering(const vector<int>& v1, const vector<int>& v2) {
+    // An item is ordered earlier if its color index is lower
+    // or if its size is smaller in case that the colors are the same
+    return 100000 * v1[0] + v1[1] < 100000 * v2[0] + v2[1];
+}
+
 vector<vector<int>> sortAndCount(vector<int> &vec) {
     // This function sorts the entries in a vector from largest to smallest and counts occurences of each value
     vector<vector<int>> result;

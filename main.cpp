@@ -7,7 +7,7 @@ int main() {
 	// Select an instance
 	// string filename = "InstancesBPPMCF/Dataset 1/70-8/70-8-1.txt";
 	// string filename = "InstancesBPPMCF/Dataset 2/120-2/120-2-1.txt";
-	// string filename = "InstancesBPPMCF/Dataset 3/10-100-4/10-100-4-1.txt";
+	// string filename = "InstancesBPPMCF/Dataset 3/15-100-8/15-100-8-5.txt";
 	// string filename = "InstancesBPPMCF/Dataset 4/50-400-3/50-400-3-1.txt";
 	string filename = "InstancesBPPMCF/Triplets/t60_00.txt";
 	Instance inst = readInstance(filename);
@@ -72,7 +72,7 @@ int main() {
 
 	// Apply MonoFlow-MultiBin
 	Solution solMFMB = solveMFMB(inst, solTS, false, timeLimit - solTS.timeT);
-	solMFMB.print(false);
+	solMFMB.print(true);
 
 	// --------------------------------------------------------------
 	// Part 4: Methods with warm start
@@ -98,11 +98,6 @@ int main() {
 		solRM2GIFFREW.timeT += preTime;
 		solRM2GIFFREW.print(true);
 
-		// Apply a reimplementation of RM2-GIFF(W), using the setup of Mehrani et al.
-		Solution solRM2GIFFREMehraniW = solveRM2GIFFSetupMehrani(inst, true, timeLimit - preTime);
-		solRM2GIFFREMehraniW.timeT += preTime;
-		solRM2GIFFREMehraniW.print(true);
-
 		// Apply LayerFlow(W)
 		Solution solLFW = solveModelAfterOrdering(inst, true, timeLimit - preTime);
 		solLFW.timeT += preTime;
@@ -117,5 +112,11 @@ int main() {
 		Solution solMFMBW = solveMFMB(inst, solTS, true, timeLimit - preTime);
 		solMFMBW.timeT += preTime;
 		solMFMBW.print(true);
+
+		// Apply a reimplementation of RM2-GIFF(W), using the setup of Mehrani et al.
+		inst.preprocessing(true, true); // First re-order the items
+		Solution solRM2GIFFREMehraniW = solveRM2GIFFSetupMehrani(inst, true, timeLimit - preTime);
+		solRM2GIFFREMehraniW.timeT += preTime;
+		solRM2GIFFREMehraniW.print(true);
 	}
 }

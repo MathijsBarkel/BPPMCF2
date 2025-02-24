@@ -62,6 +62,7 @@ Instance readInstance(string filename);
 Instance createInstance(string name, int I, int B, int C, int W, const vector<vector<int>>& items);
 Instance generateInstance(string name, int I, int B, int C, int W, int r=0);
 bool itemOrdering(const vector<int>& v1, const vector<int>& v2);
+bool reverseItemOrdering(const vector<int>& v1, const vector<int>& v2);
 vector<vector<int>> sortAndCount(vector<int> &vec);
 double getCPUTime();
 void printVector(const vector<int>& vec, string name);
